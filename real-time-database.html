@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Real Time Database</title>
+
+    <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <h1 class="text-center">Real Time Database</h1>
+
+    <table id="usersList" class="table table-hover col-md-4">
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">E-mail</th>
+            </tr>
+        </thead>
+        <tbody id="usersListItems">
+            <tr class="table-secondary">
+                <td colspan="2" class="text-center">Carregando...</td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+
+    <div class="col-md-4 p-0 card border-secondary">
+        <div class="card-header">Cadastro de Usuários</div>
+
+        <form class="card-body">
+            <div class="form-group">
+                <label for="nameInput">Nome do Cliente</label>
+                <input type="text" class="form-control" id="nameInput" placeholder="Nome" />
+            </div>
+            <div class="form-group">
+                <label for="emailInput">E-mail do Cliente</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="E-mail" aria-describedby="emailHelp" />
+            </div>
+
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-success" id="addButton">Adicionar</button>
+            </div>
+        </form>
+    </div>
+    <br />
+    <p class="text-center">
+        <a href="/" class="btn-link">Voltar para Home</a>
+    </p>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    <script src="./js/App.js"></script>
+    <script src="./js/real-time-database.js"></script>
+</body>
+</html>
